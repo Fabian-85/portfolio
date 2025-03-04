@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+
+  isEnglish = false;
+
+  changeLanguage() {
+    this.isEnglish = !this.isEnglish;
+  }
 }
+
+

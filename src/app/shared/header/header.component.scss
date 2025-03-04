@@ -1,0 +1,111 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 72px;
+  background: none;
+  a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  > .initials {
+    font-family: "League Script";
+    font-size: 35px;
+    font-weight: 1000;
+    color: #3355ff;
+    transition: all 0.8s ease-in-out;
+    &:hover {
+      color: #f87a55;
+    }
+  }
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  > span {
+    font-size: 18px;
+  }
+  .switch {
+    width: 32px;
+    height: 12px;
+    background: #f87a55;
+    border-radius: 15px;
+    margin: 0 10px;
+    position: relative;
+    border: 1px white solid;
+    cursor: pointer;
+    > .slider {
+      position: absolute;
+      top: -2px;
+      left: -4px;
+      width: 16px;
+      height: 16px;
+      background: #3355ff;
+      border-radius: 50%;
+      border: 1px white solid;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.active-lang-position {
+  left: 20px !important;
+}
+
+.active-lang-color {
+  color: #f87a55;
+}
+
+.about-me {
+  padding: 10px;
+ 
+  &:hover {
+    background: url(../../../assets/img/hover-effect-about-me.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.skills {
+  padding: 10px;
+  
+  &:hover {
+    background: url(../../../assets/img/hover-effect-skill.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.projects {
+  padding: 10px;
+  
+  &:hover {
+    background: url(../../../assets/img/hover-effect-project.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contact {
+  padding: 10px;
+  
+  &:hover {
+    background: url(../../../assets/img/hover-effect-contact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+
+

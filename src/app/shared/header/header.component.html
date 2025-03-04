@@ -1,1 +1,19 @@
-<p>header works!</p>
+<header>
+    <span class="initials">FM</span>
+    <a class="about-me" href="#about-me"> About me</a>
+    <a class="skills"  href="#skills"> Skills</a>
+    <a class="projects"  href="#projects"> Projects</a>
+    <a class="contact"  href="#contact"> Contact</a>
+    <div>
+        <div class="language-toggle">
+            <span [class.active-lang-color]="!isEnglish">DE</span>
+            <div class="switch" (click)="changeLanguage()">
+                <div class="slider" [class.active-lang-position]="isEnglish"></div>
+            </div>
+            <span [class.active-lang-color]="isEnglish">EN</span>
+        </div>
+    </div>
+
+</header>
+
+ 
