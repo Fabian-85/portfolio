@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Bricolage Grotesque";
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
