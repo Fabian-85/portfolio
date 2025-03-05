@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Bricolage Grotesque';
+  font-family: "Bricolage Grotesque";
   box-sizing: border-box;
 }
 
@@ -47,6 +47,34 @@ p {
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.white-button {
+  border: white solid 1px;
+  color: white;
+  box-shadow: 2px 2px 0px white;
+  &:hover {
+    background-color: #F87A55;
+    box-shadow: none;
+  }
+}
+
+.black-button {
+  border: black solid 1px;
+  color: black;
+  box-shadow: 2px 2px 0px black;
+  &:hover {
+    background-color: #F87A55;
+    box-shadow: none;
+  }
 }
 
 /*---------------Fonts--------------------- */

@@ -1,1 +1,17 @@
-<p>projects works!</p>
+<section>
+ 
+    <div class="test">
+        <p>MY CRAFT</p>
+        <h2>Projects</h2>
+        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+   
+  @for (project of projects; track index; let index = $index) {
+        <app-project [project]="project"></app-project>
+        } 
+
+            <!--   @for (project of projects; track index; let index = $index) {
+        <app-project></app-project>
+        
+          }-->
+</section>
