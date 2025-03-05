@@ -1,24 +1,39 @@
 <section>
     <div class="top-container">
         <div>
-            <div>
-                <button class="hello-world-button">Hello World</button>
+            <div class="hello-world-section">
+                @if(hover){
+                <img class="animate" src="assets/img/hello-world-icon.png" alt="">
+                }
+                @if(fix){
+                <img class="fix" src="assets/img/hello-world-icon.png" alt="">
+                }
+                <button class="hello-world-button" (mouseleave)="resetButtonAnimation()"
+                    (mouseenter)="showButtonAnimation()">{{helloWorldText}}</button>
             </div>
             <h1>
-                Frontend
+                @for (letter of firstWordAsArray; track index; let index =$index) {
+                <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
+                    (mouseleave)="resetLetterOnFirstWorld(index)"
+                    (mouseenter)="changeLetterOnFirstWorld(index)">{{letter.display}}</span>
+                }
             </h1>
         </div>
         <img src="assets/img/hover-effect-contact.png" alt="">
     </div>
     <div class="bottom-container">
         <h1>
-            Entwickler
+            @for (letter of secondWordAsArray; track index; let index = $index) {
+            <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
+                (mouseleave)="resetLetterOnSecondWorld(index)"
+                (mouseenter)="changeLetterOnSecondWorld(index)">{{letter.display}}</span>
+            }
         </h1>
         <button (click)="navigateToContactSection()" class="white-button">Get in Touch</button>
     </div>
 
     <div class="icons">
         <a href="https://github.com/Fabian-85"> <img src="assets/img/github-icon.png" alt=""> </a>
-      <a href="mailto:fabian.maier0805@hotmail.com">   <img src="assets/img/mail-icon.png" alt=""></a>
+        <a href="mailto:fabian.maier0805@hotmail.com"> <img src="assets/img/mail-icon.png" alt=""></a>
     </div>
 </section>

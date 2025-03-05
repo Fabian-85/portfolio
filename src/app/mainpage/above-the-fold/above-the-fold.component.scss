@@ -1,62 +1,91 @@
-section{
-    height: 100vh;
-    width: 100%;
-    background: url(../../../assets/img/background-above-the-fold.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+section {
+  height: 100vh;
+  width: 100%;
+  background: url(../../../assets/img/background-above-the-fold.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.top-container{
+.top-container {
   display: flex;
   justify-content: center;
   align-items: end;
-  >div{
+  > div {
     display: flex;
     flex-direction: column;
   }
 }
 
-.bottom-container{
+.bottom-container {
   display: flex;
   justify-content: center;
-  flex-direction:column ;
+  flex-direction: column;
   align-items: end;
 }
 
-.hello-world-button{
-  color: white;
-  width: 150px;
+
+.hello-world-section{
+  position: relative;
+  .animate{
+    position: absolute;
+    bottom: 100%;
+    width: 30px; 
+    animation: 900ms hover-animation ease-in-out;
+    transform:translateX(190px) scaleX(-1);
+  }
+  .fix{
+    position: absolute;
+    bottom: 100%;
+    width: 30px; 
+    transform: translateX(300px) scaleX(-1) rotate(-90deg);
+  }
+}
+
+@keyframes hover-animation{
+from{
+transform: translateX(0), scaleX(-1);
+}to{
+  transform: translateX(300px) scaleX(-1) rotate(-90deg);
+}
+}
+
+.hello-world-button {
+  color: rgb(0, 0, 0);
+  width: 150px; 
   font-size: 18px;
   padding: 12px 24px;
   border: 1px white solid;
+  transition: all 0.9s ease-in-out;
+  cursor: default;
+  &:hover{
+    background-color: #3355ff;
+    width: 330px;
+  }
 }
 
-.icons{
+.icons {
   position: absolute;
   bottom: 90px;
-  left: 10px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  a{
+  a {
     width: 30px;
-     
   }
-  img{
-   width: 100%;
-   padding: 4px;
-   border: solid 1px white;
-   border-radius: 50%;
-   &:hover{
-     background-color: #3355FF;
-   }
+  img {
+    width: 100%;
+    padding: 4px;
+    border: solid 1px white;
+    border-radius: 50%;
+    &:hover {
+      background-color: #3355ff;
+    }
   }
 }
-
-
  
