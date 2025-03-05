@@ -1,0 +1,43 @@
+@import "../../../styles.scss";
+
+section {
+  background: url(../../../assets/img/background-skill-section.png);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding: 144px 120px;
+}
+
+.textbox {
+  @include dFlex(center, center, row, 30px);
+}
+
+.skill-background {
+  background: url(../../../assets/img/skill-description-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 656px;
+
+  > p {
+    padding: 38px;
+  }
+}
+
+.skills {
+  margin-top: 28px;
+  @include dFlex(center, center, row, 10px);
+  .skill {
+    @include dFlex(center, center, column);
+    img {
+      width: 72px;
+      height: 72px;
+      transition: all 0.8s ease-in-out;
+      filter: grayscale(100%);  
+      &:hover{
+        transform: scale(0.8);  
+        filter: none;
+      }
+    }
+  }
+}
