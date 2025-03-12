@@ -2,11 +2,11 @@
     <div class="top-container">
         <div>
             <div class="hello-world-section">
-                @if(hover){
-                <img class="animate" src="assets/img/hello-world-icon.png" alt="">
+                @if(hoverOnWelcomeButton){
+                <img class="animated-hand" src="assets/img/hello-world-icon.png" alt="">
                 }
-                @if(fix){
-                <img class="fix" src="assets/img/hello-world-icon.png" alt="">
+                @if(endOfHandAnimation){
+                <img class="fixed-hand" src="assets/img/hello-world-icon.png" alt="">
                 }
                 <button class="hello-world-button" (mouseleave)="resetButtonAnimation()"
                     (mouseenter)="showButtonAnimation()">{{helloWorldText}}</button>

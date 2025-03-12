@@ -30,14 +30,14 @@ section {
 
 .hello-world-section {
   position: relative;
-  .animate {
+  .animated-hand {
     position: absolute;
     bottom: 100%;
     width: 30px;
     animation: 900ms hover-animation ease-in-out;
     transform: translateX(190px) scaleX(-1);
   }
-  .fix {
+  .fixed-hand {
     position: absolute;
     bottom: 100%;
     width: 30px;

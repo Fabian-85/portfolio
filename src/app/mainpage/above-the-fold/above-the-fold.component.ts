@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AboveTheFoldComponent {
   helloWorldText = 'Hello World';
-  hover = false;
-  fix = false;
+  hoverOnWelcomeButton = false;
+  endOfHandAnimation = false;
   timeoutId: any;
   firstWord = 'Frontend';
   secondWord = 'Entwickler';
@@ -64,18 +64,18 @@ export class AboveTheFoldComponent {
   }
 
   showButtonAnimation() {
-    this.hover = true;
+    this.hoverOnWelcomeButton = true;
     this.timeoutId = setTimeout(() => {
       this.helloWorldText = "I'm Fabian Maier-Kumpukkattu";
-      this.fix = true;
-      this.hover = false;
+      this.endOfHandAnimation = true;
+      this.hoverOnWelcomeButton = false;
     }, 800);
   }
 
   resetButtonAnimation() {
     clearTimeout(this.timeoutId);
-    this.hover = false;
-    this.fix = false;
+    this.hoverOnWelcomeButton = false;
+    this.endOfHandAnimation = false;
     this.helloWorldText = 'Hello World';
   }
 
