@@ -19,7 +19,11 @@
                 }
             </h1>
         </div>
-        <img src="assets/img/hover-effect-contact.png" alt="">
+        <div (mouseenter)="removeFilterOnProfilImage(); changeProfilName()" (mouseleave)="addFilterOnProfilImage();resetProfilName()" class="personal-image">
+            <img class="polaroid-background" src="assets/img/polaroid-background.png" alt="">
+            <img [ngClass]="{'grayFilter':!profilImageHover}" class="profile-img" src="assets/img/profile.png" alt="">
+            <span>{{profilImageName}}</span>
+        </div>
     </div>
     <div class="bottom-container">
         <h1>

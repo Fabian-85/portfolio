@@ -28,41 +28,41 @@ section {
   align-items: end;
 }
 
-
-.hello-world-section{
+.hello-world-section {
   position: relative;
-  .animate{
+  .animate {
     position: absolute;
     bottom: 100%;
-    width: 30px; 
+    width: 30px;
     animation: 900ms hover-animation ease-in-out;
-    transform:translateX(190px) scaleX(-1);
+    transform: translateX(190px) scaleX(-1);
   }
-  .fix{
+  .fix {
     position: absolute;
     bottom: 100%;
-    width: 30px; 
+    width: 30px;
     transform: translateX(300px) scaleX(-1) rotate(-90deg);
   }
 }
 
-@keyframes hover-animation{
-from{
-transform: translateX(0), scaleX(-1);
-}to{
-  transform: translateX(300px) scaleX(-1) rotate(-90deg);
-}
+@keyframes hover-animation {
+  from {
+    transform: translateX(0), scaleX(-1);
+  }
+  to {
+    transform: translateX(300px) scaleX(-1) rotate(-90deg);
+  }
 }
 
 .hello-world-button {
   color: rgb(0, 0, 0);
-  width: 150px; 
+  width: 150px;
   font-size: 18px;
   padding: 12px 24px;
   border: 1px white solid;
   transition: all 0.9s ease-in-out;
   cursor: default;
-  &:hover{
+  &:hover {
     background-color: #3355ff;
     width: 330px;
   }
@@ -75,9 +75,11 @@ transform: translateX(0), scaleX(-1);
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   a {
     width: 30px;
   }
+
   img {
     width: 100%;
     padding: 4px;
@@ -88,4 +90,35 @@ transform: translateX(0), scaleX(-1);
     }
   }
 }
- 
+
+.grayFilter {
+  filter: grayscale(1);
+}
+
+.personal-image {
+  transform: translateX(30px) rotate(10deg) scale(1.3);
+  position: relative;
+  width: 100px;
+
+  .polaroid-background {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-img {
+    
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+  }
+
+  span {
+    font-family: "Kalam";
+    position: absolute;
+    bottom: 0px;
+    left: 8px;
+    font-weight: 700;
+  }
+}
