@@ -14,12 +14,13 @@ section {
 .skill-background {
   background: url(../../../assets/img/skill-description-background.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 100%; 
+  
   width: 656px;
   color: black;
   > p {
-    padding: 38px;
+    padding: 50px 20px;
+    font-size:16px;
   }
 }
 
