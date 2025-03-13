@@ -1,0 +1,114 @@
+section {
+  padding: 144px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  width: 50%;
+  padding-right: 50px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    img {
+      width: 32px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.right-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .black-button {
+    align-self: flex-end;
+  }
+}
+
+.headline{
+  h2 {
+    display: inline;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+      transition: all 0.8s ease-in-out;
+      transform: scale(0);
+      transform-origin: left;
+    }
+  }
+}
+
+.underline-headline{
+  transform: scale(1) !important;
+}
+ 
+.first-background {
+  background: url(../../../assets/img/yellow-background-about-me.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 45px 45px 55px 45px;
+  transform: rotate(-3deg) translateY(38px);
+}
+
+.second-background {
+  position: relative;
+  background: url(../../../assets/img/orange-background-about-me.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 45px 45px 55px 45px;
+  transform: rotate(2deg) translateY(-38px);
+  z-index: -1;
+}
+
+@media (max-width: 850px) {
+  section {
+    flex-direction: column;
+    padding: 144px 100px;
+  }
+
+  .right-side,
+  .left-side {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 630px) {
+  section {
+    padding: 144px 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  section {
+    padding: 144px 20px;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .first-background,
+  .second-background {
+    padding: 45px 10px 55px 10px;
+  }
+}
