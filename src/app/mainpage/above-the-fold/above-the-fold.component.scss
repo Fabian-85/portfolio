@@ -38,7 +38,7 @@ h1 {
     position: absolute;
     bottom: 100%;
     width: 30px;
-    animation: 900ms hover-hand-animation ease-in-out;
+    animation: 500ms hover-hand-animation ease-in-out;
     transform: translateX(190px) scaleX(-1);
   }
   .fixed-hand {
@@ -53,12 +53,12 @@ h1 {
     font-size: 18px;
     padding: 12px 24px;
     border: 1px white solid;
-    transition: all 0.9s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: default;
   }
 }
 
-.hello-world-button-hover{
+.hello-world-button-hover {
   background-color: #3355ff;
   width: 330px !important;
 }
@@ -126,7 +126,7 @@ h1 {
   }
 }
 
-.hide-desktop{
+.hide-desktop {
   display: none;
 }
 
@@ -178,11 +178,11 @@ h1 {
     filter: grayscale(0);
   }
 
-  .hide-mobile{
+  .hide-mobile {
     display: none;
   }
 
-  .hide-desktop{
+  .hide-desktop {
     display: block;
   }
 }
@@ -200,9 +200,9 @@ h1 {
 }
 
 @media (max-width: 380px) {
-  .hello-world-section-desktop {
+  .hello-world-section {
     .animated-hand {
-      animation: 900ms hover-hand-animation-responsive ease-in-out;
+      animation: 500ms hover-hand-animation-responsive ease-in-out;
       transform: translateX(100px) scaleX(-1);
     }
     .fixed-hand {
@@ -212,9 +212,10 @@ h1 {
 
   .hello-world-button {
     width: 150px;
-    &:hover {
-      width: 200px;
-    }
+  }
+
+  .hello-world-button-hover {
+    width: 200px !important;
   }
 }
 

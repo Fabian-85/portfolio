@@ -72,7 +72,7 @@ export class AboveTheFoldComponent {
       this.helloWorldTextDesktop = "I'm Fabian Maier-Kumpukkattu";
       this.endOfHandAnimationOnDesktop = true;
       this.hoverOnWelcomeButtonOnDesktop = false;
-    }, 800);
+    }, 400);
   }
 
   resetButtonAnimationOnDesktop() {
@@ -88,10 +88,10 @@ export class AboveTheFoldComponent {
     if (this.endOfHandAnimationOnMobile == false) {
       this.hoverOnWelcomeButtonOnMobile = true;
       setTimeout(() => {
-        this.helloWorldTextMobile = "I'm Fabian Maier-Kumpukkattu";
+        this.helloWorldTextMobile = "I'm Fabian";
         this.endOfHandAnimationOnMobile = true;
         this.hoverOnWelcomeButtonOnMobile = false;
-      }, 800);
+      }, 400);
     }
   }
 
