@@ -6,7 +6,7 @@ header {
 
   .hide-mobile {
     display: flex;
-    padding: 19px 72px;
+    padding: 19px 80px;
     justify-content: space-between;
     align-items: center;
     background: none;
@@ -14,7 +14,6 @@ header {
 
   .hide-desktop {
     display: none;
-    padding: 16px;
   }
 }
 
@@ -201,5 +200,18 @@ a {
   .hide-desktop {
     display: flex !important;
     justify-content: space-between;
+    padding: 16px 100px;
+  }
+}
+
+@media (max-width: 630px) {
+  .hide-desktop {
+    padding: 16px 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  .hide-desktop {
+    padding: 16px 20px;
   }
 }

@@ -2,10 +2,9 @@
 
 section {
   background: url(../../../assets/img/background-skill-section.png);
-  width: 100vw;
-  height: 100vh;
   background-repeat: no-repeat;
   padding: 144px 120px;
+  color: white;
 }
 
 .textbox {
@@ -18,7 +17,7 @@ section {
   background-size: cover;
   background-position: center;
   width: 656px;
-
+  color: black;
   > p {
     padding: 38px;
   }
@@ -26,8 +25,10 @@ section {
 
 .skills {
   margin-top: 28px;
-  @include dFlex(center, center, row, 10px);
+  @include dFlex(center, center, row);
+  flex-wrap: wrap;
   .skill {
+    width: 20%;
     @include dFlex(center, center, column);
     img {
       width: 72px;
@@ -39,5 +40,42 @@ section {
         filter: none;
       }
     }
+  }
+}
+
+@media (max-width: 850px) {
+  section{
+    padding: 144px 100px;
+  }
+
+  .skills {
+    .skill {
+      width: 33.33%;
+      img {
+        transform: scale(0.8);  
+        filter: none;
+      }
+    }
+  }
+
+  .textbox{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .skill-background{
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  section {
+    padding: 144px 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  section {
+    padding: 144px 20px;
   }
 }
