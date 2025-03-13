@@ -1,17 +1,27 @@
 <section>
-    <div class="top-container">
-        <div>
-            <div class="hello-world-section">
-                @if(hoverOnWelcomeButton){
+    <div class="top-container responsive-container">
+        <div class="responsive-container">
+            <div class="hello-world-section hide-mobile">
+                @if(hoverOnWelcomeButtonOnDesktop){
                 <img class="animated-hand" src="assets/img/hello-world-icon.png" alt="">
                 }
-                @if(endOfHandAnimation){
+                @if(endOfHandAnimationOnDesktop){
                 <img class="fixed-hand" src="assets/img/hello-world-icon.png" alt="">
                 }
-                <button class="hello-world-button" (mouseleave)="resetButtonAnimation()"
-                    (mouseenter)="showButtonAnimation()">{{helloWorldText}}</button>
+                <button [ngClass]="{'hello-world-button-hover': hoverOnWelcomeButtonOnDesktop || endOfHandAnimationOnDesktop}" class="hello-world-button" (mouseleave)="resetButtonAnimationOnDesktop()"
+                    (mouseenter)="showButtonAnimationOnDesktop()">{{helloWorldTextDesktop}}</button>
             </div>
-            <h1>
+            <div class="hello-world-section hide-desktop">
+                @if(hoverOnWelcomeButtonOnMobile){
+                <img class="animated-hand" src="assets/img/hello-world-icon.png" alt="">
+                }
+                @if(endOfHandAnimationOnMobile){
+                <img class="fixed-hand" src="assets/img/hello-world-icon.png" alt="">
+                }
+                <button [ngClass]="{'hello-world-button-hover': hoverOnWelcomeButtonOnMobile || endOfHandAnimationOnMobile}" class="hello-world-button"
+                    (mouseenter)="showButtonAnimationOnMobile()">{{helloWorldTextMobile}}</button>
+            </div>
+            <h1 class="first-word">
                 @for (letter of firstWordAsArray; track index; let index =$index) {
                 <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
                     (mouseleave)="resetLetterOnFirstWorld(index)"
@@ -19,25 +29,28 @@
                 }
             </h1>
         </div>
-        <div (mouseenter)="removeFilterOnProfilImage(); changeProfilName()" (mouseleave)="addFilterOnProfilImage();resetProfilName()" class="personal-image">
+        <div (mouseenter)="removeFilterOnProfilImage(); changeProfilName()"
+            (mouseleave)="addFilterOnProfilImage();resetProfilName()" class="personal-image">
             <img class="polaroid-background" src="assets/img/polaroid-background.png" alt="">
-            <img [ngClass]="{'grayFilter':!profilImageHover}" class="profile-img" src="assets/img/profile.png" alt="">
-            <span>{{profilImageName}}</span>
+            <img [ngClass]="{'gray-filter-for-personal-image':!profilImageHover}" class="profile-img"
+                src="assets/img/profile.png" alt="">
+            <span class="hide-mobile">{{profilImageName}}</span>
+            <span class="hide-desktop">Fabian :D</span>
         </div>
     </div>
-    <div class="bottom-container">
-        <h1>
+    <div class="bottom-container responsive-container">
+        <h1 class="second-word">
             @for (letter of secondWordAsArray; track index; let index = $index) {
             <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
                 (mouseleave)="resetLetterOnSecondWorld(index)"
                 (mouseenter)="changeLetterOnSecondWorld(index)">{{letter.display}}</span>
             }
         </h1>
-        <button (click)="navigateToContactSection()" class="white-button">Get in Touch</button>
+        <button (click)="navigateToContactSection()" class="contact-button white-button">Get in Touch</button>
     </div>
 
     <div class="icons">
-        <a href="https://github.com/Fabian-85"> <img src="assets/img/github-icon.png" alt=""> </a>
-        <a href="mailto:fabian.maier0805@hotmail.com"> <img src="assets/img/mail-icon.png" alt=""></a>
+        <a target="_blank" href="https://github.com/Fabian-85"> <img src="assets/img/github-icon.png" alt=""> </a>
+        <a target="_blank" href="mailto:fabian.maier0805@hotmail.com"> <img src="assets/img/mail-icon.png" alt=""></a>
     </div>
 </section>

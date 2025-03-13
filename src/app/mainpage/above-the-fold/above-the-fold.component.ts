@@ -8,12 +8,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './above-the-fold.component.scss',
 })
 export class AboveTheFoldComponent {
-  helloWorldText = 'Hello World';
-  hoverOnWelcomeButton = false;
-  endOfHandAnimation = false;
+  helloWorldTextMobile = 'Hello World';
+  helloWorldTextDesktop = 'Hello World';
+  hoverOnWelcomeButtonOnDesktop = false;
+  endOfHandAnimationOnDesktop = false;
+  hoverOnWelcomeButtonOnMobile = false;
+  endOfHandAnimationOnMobile = false;
   timeoutId: any;
   firstWord = 'Frontend';
-  secondWord = 'Entwickler';
+  secondWord = 'ENTWICKLER';
   firstWordAsArray: any = [];
   secondWordAsArray: any = [];
   profilImageHover = false;
@@ -63,20 +66,33 @@ export class AboveTheFoldComponent {
       this.secondWordAsArray[index].original;
   }
 
-  showButtonAnimation() {
-    this.hoverOnWelcomeButton = true;
+  showButtonAnimationOnDesktop() {
+    this.hoverOnWelcomeButtonOnDesktop = true;
     this.timeoutId = setTimeout(() => {
-      this.helloWorldText = "I'm Fabian Maier-Kumpukkattu";
-      this.endOfHandAnimation = true;
-      this.hoverOnWelcomeButton = false;
+      this.helloWorldTextDesktop = "I'm Fabian Maier-Kumpukkattu";
+      this.endOfHandAnimationOnDesktop = true;
+      this.hoverOnWelcomeButtonOnDesktop = false;
     }, 800);
   }
 
-  resetButtonAnimation() {
+  resetButtonAnimationOnDesktop() {
     clearTimeout(this.timeoutId);
-    this.hoverOnWelcomeButton = false;
-    this.endOfHandAnimation = false;
-    this.helloWorldText = 'Hello World';
+    this.hoverOnWelcomeButtonOnDesktop = false;
+    this.endOfHandAnimationOnDesktop = false;
+    this.helloWorldTextDesktop = 'Hello World';
+  }
+
+  showButtonAnimationOnMobile() {
+    console.log(this.endOfHandAnimationOnMobile);
+    console.log(this.hoverOnWelcomeButtonOnMobile);
+    if (this.endOfHandAnimationOnMobile == false) {
+      this.hoverOnWelcomeButtonOnMobile = true;
+      setTimeout(() => {
+        this.helloWorldTextMobile = "I'm Fabian Maier-Kumpukkattu";
+        this.endOfHandAnimationOnMobile = true;
+        this.hoverOnWelcomeButtonOnMobile = false;
+      }, 800);
+    }
   }
 
   removeFilterOnProfilImage() {

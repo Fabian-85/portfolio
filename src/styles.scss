@@ -51,7 +51,7 @@ p {
 }
 
 button {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   padding: 12px 24px;
   border-radius: 100px;
@@ -86,6 +86,19 @@ button {
   }
 }
 
+@media (max-width: 500px) {
+ h1{
+  font-size: 50px;
+  line-height: 50px;
+ }
+}
+
+@media (max-width: 360px) {
+  h1{
+   font-size: 40px;
+   line-height: 40px;
+  }
+ }
 /*---------------Fonts--------------------- */
 
 /* bricolage-grotesque-200 - latin */
