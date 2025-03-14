@@ -1,17 +1,13 @@
 <section>
  
-    <div class="test">
+    <div class="description">
         <p>MY CRAFT</p>
         <h2>Projects</h2>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <p>Entdecken Sie hier eine Auswahl meiner Projekte und interagieren Sie mit ihnen, um einen umfassenden Einblick in meine Fähigkeiten als Frontend-Entwickler zu erhalten.</p>
     </div>
    
   @for (project of projects; track index; let index = $index) {
         <app-project [project]="project"></app-project>
         } 
 
-            <!--   @for (project of projects; track index; let index = $index) {
-        <app-project></app-project>
-        
-          }-->
 </section>

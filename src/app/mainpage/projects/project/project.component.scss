@@ -1,19 +1,73 @@
+.project,
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .project-img-container {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  .project-img  {
+  .project-img {
     width: 100%;
     border-radius: 20px;
     transition: all 0.8s ease-in-out;
-    &:hover{
-        transform: scale(1.3);
-        width: 100%;
-    }
   }
-  button{
-    position: absolute;
-    bottom:20px;
-    right: 20px;
+
+  .zoom-in {
+    transform: scale(1.3);
+    width: 100%;
+  }
+}
+
+.desktop-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+.mobile-button {
+  display: none;
+  align-self: flex-end;
+}
+
+.d-none {
+  display: none;
+}
+
+.project-img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), #00000000 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Damit das Overlay keine Mausinteraktionen blockiert */
+}
+
+.project-img-container:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 850px) {
+  .desktop-button {
+    display: none;
+  }
+
+  .mobile-button {
+    display: block !important;
+  }
+
+  .zoom-in {
+    transform: scale(1) !important;
+  }
+
+  .project-img-container:hover::after {
+    opacity: 0 !important;
   }
 }

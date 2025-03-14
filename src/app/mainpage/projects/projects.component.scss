@@ -1,16 +1,46 @@
-section{
-    padding: 144px 80px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+section {
+  padding: 144px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 56px 5%;
 }
 
-.test{
-    width: 50%;
-    padding: 20px;
+.description {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-app-project{
-    width: 50%;
-    padding: 20px;
+app-project {
+  width: 45%;
+}
+
+@media (max-width: 850px) {
+  section {
+    padding: 144px 100px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  app-project {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  section {
+    padding: 144px 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  section {
+    padding: 144px 20px;
+  }
 }

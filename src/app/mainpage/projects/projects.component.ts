@@ -44,6 +44,6 @@ export class ProjectsComponent {
       projectDescription:
         'Eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und -zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeit-Messaging und eine effiziente Kanalorganisation.',
       projectImg: 'assets/img/projects/dabubble.png',
-    },
+    }
   ];
 }
