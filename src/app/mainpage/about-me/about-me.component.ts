@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  isHeadlineDecorationVisible = false;
+  isHeadlineDecorationVisible = true;
 
   /*
   intervalId:any;

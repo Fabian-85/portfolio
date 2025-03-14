@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss',
 })
 export class SkillSetComponent {
+
+  isHeadlineDecorationVisible = true;
+  
   skillsIcons = [
     { name: 'HTML', icon: 'html.png' },
     { name: 'CSS', icon: 'css.png' },

@@ -9,6 +9,9 @@ section {
 
 .textbox {
   @include dFlex(center, center, row, 30px);
+  P{
+    margin-bottom: 16px;
+  }
 }
 
 .skill-background {
@@ -34,7 +37,7 @@ section {
     img {
       width: 72px;
       height: 72px;
-      transition: all 0.8s ease-in-out;
+      transition: all 0.3s ease-in-out;
       filter: grayscale(100%);  
       &:hover{
         transform: scale(0.8);  
@@ -42,6 +45,28 @@ section {
       }
     }
   }
+}
+
+.headline{
+  h2 {
+    display: inline;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+      transition: all 0.8s ease-in-out;
+      transform: scale(0);
+      transform-origin: left;
+    }
+  }
+}
+
+.underline-headline{
+  transform: scale(1) !important;
 }
 
 @media (max-width: 850px) {

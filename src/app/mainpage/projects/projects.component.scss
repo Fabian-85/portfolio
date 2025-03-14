@@ -11,10 +11,35 @@ section {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  p{
+    margin-top: 16px;
+  }
 }
 
 app-project {
   width: 45%;
+}
+
+.headline{
+  h2 {
+    display: inline;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+      transform: scale(0);
+      transform-origin: left;
+    }
+  }
+}
+
+.underline-headline{
+  transform: scale(1) !important;
 }
 
 @media (max-width: 850px) {
