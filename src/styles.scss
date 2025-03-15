@@ -110,6 +110,28 @@ button {
    line-height: 40px;
   }
  }
+/*---------------scrollbar--------------------- */
+::-webkit-scrollbar {
+  width: 12px;  
+}
+
+::-webkit-scrollbar-track {
+  background: #F87A55;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3355FF;
+  border-radius: 6px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #062ceb;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
 
 /*---------------Fonts--------------------- */
 
