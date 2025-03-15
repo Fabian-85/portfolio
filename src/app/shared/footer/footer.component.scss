@@ -17,38 +17,60 @@ footer {
 }
 
 .legal-notice-link {
-    a {
-      position: relative;
-      img {
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        right: 0;
-        object-fit: cover;
-        width: 100%;
-        transition: all 0.5s ease-in-out;
-        transform: scale(0);
-        transform-origin: left;
-      }
-      &:hover img {
-        transform: scale(1);
-      }
+  a {
+    position: relative;
+    img {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      transform: scale(0);
+      transform-origin: left;
+    }
+    &:hover img {
+      transform: scale(1);
     }
   }
+}
 
 .links {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  a{
+  a {
     padding: 8px 20px;
     border-radius: 20px;
     transition: all 0.5s ease-in-out;
+    position: relative;
+    img {
+    display:none;
+      position: absolute;
+      width: 20px;
+      bottom: 100%;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      transform: rotate(0) translateX(0);
+      animation: hover-link 0.3s  ease-in-out;
+    }
     &:hover {
-        background: #3255ff;
-      }
+      background: #3255ff;
+    }
   }
 }
+
+ 
+  
+@keyframes hover-link {
+    from {
+      transform: rotate(-180deg) translateX(10px);
+    }
+    to {
+      transform: rotate(0) translateX(0);
+    }
+  }
 
 a {
   color: white;
