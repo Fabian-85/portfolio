@@ -173,19 +173,19 @@ section {
 }
 
 @media (max-width: 850px) {
-  section {
-    padding: 144px 100px;
-  }
+  .content {
+    padding: 144px 100px 0 !important;
+  } 
 }
 
 @media (max-width: 630px) {
-  section {
-    padding: 144px 50px;
+  .content {
+    padding: 144px 50px 0 !important;
   }
 }
 
 @media (max-width: 530px) {
-  section {
-    padding: 144px 20px;
+  .content {
+    padding: 144px 20px 0 !important;
   }
 }

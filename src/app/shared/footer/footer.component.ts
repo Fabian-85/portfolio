@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  hoverOnGithubLink = true;
+  hoverOnGithubLink = false;
   hoverOnEmailLink = false;
 
   showGithubHoverAnimation() {
