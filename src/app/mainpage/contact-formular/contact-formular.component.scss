@@ -1,5 +1,4 @@
 section {
-  padding: 144px 80px;
   width: 100%;
   background: url(../../../assets/img/background-above-the-fold.png);
   background-size: cover;
@@ -19,7 +18,7 @@ section {
 
 .content {
   display: flex;
-
+  padding: 144px 80px 0;
   .left-side {
     width: 50%;
     display: flex;
@@ -124,6 +123,10 @@ section {
 
   p {
     flex: 1;
+    a {
+      color: #3355ff;
+      text-decoration: none;
+    }
   }
 }
 

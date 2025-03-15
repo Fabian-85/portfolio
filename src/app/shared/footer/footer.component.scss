@@ -1,0 +1,68 @@
+footer {
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+  padding: 0 80px 80px;
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}
+
+.legal-notice-link {
+    a {
+      position: relative;
+      img {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        transform: scale(0);
+        transform-origin: left;
+      }
+      &:hover img {
+        transform: scale(1);
+      }
+    }
+  }
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  a{
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background: #3255ff;
+      }
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.initials {
+  font-family: "League Script";
+  font-size: 35px;
+  font-weight: 1000;
+  color: #f87a55;
+  transition: all 0.8s ease-in-out;
+  cursor: default;
+  &:hover {
+    color: #3355ff;
+  }
+}
