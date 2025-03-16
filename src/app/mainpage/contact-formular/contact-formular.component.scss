@@ -129,6 +129,9 @@ section {
     a {
       color: #3355ff;
       text-decoration: none;
+      &:hover{
+        color:#f7c518;
+      }
     }
   }
 }
