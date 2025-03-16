@@ -11,7 +11,7 @@
         <p>Entdecken Sie hier eine Auswahl meiner Projekte und interagieren Sie mit ihnen, um einen umfassenden Einblick in meine Fähigkeiten als Frontend-Entwickler zu erhalten.</p>
     </div>
    
-  @for (project of projects; track index; let index = $index) {
+  @for (project of  projectService.projects; track index; let index = $index) {
         <app-project [project]="project"></app-project>
         } 
 

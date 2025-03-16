@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from '../services/project.service';
 @Component({
   selector: 'app-project-details',
   standalone: true,
   imports: [],
   templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.scss'
+  styleUrl: './project-details.component.scss',
 })
 export class ProjectDetailsComponent {
 
-  project: {
-    projectName: string;
-    projectSkills: string[];
-    projectDescription: string;
-    projectImg: string;
-  } = {
-    projectName: 'Sharkie',
-    projectSkills: ['JavaScript', 'HTML', 'CSS'],
-    projectDescription:
-      'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
-    projectImg: 'assets/img/projects/sharkie.png',
-  };
+  projectService = inject(ProjectService);
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    
+    this.route.params.subscribe((param) => {
+      this.projectService.currentProjectID = param['projectName'];
+    this.projectService.findCurrentProjectWithID();
+    });
+   
+  }
 }

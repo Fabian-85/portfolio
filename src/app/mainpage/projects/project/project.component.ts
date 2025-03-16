@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -9,32 +10,34 @@ import { CommonModule } from '@angular/common';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-
   hover = false;
 
   @Input()
   project: {
+    projectID: string;
     projectName: string;
     projectSkills: string[];
     projectDescription: string;
     projectImg: string;
   } = {
+    projectID: 'Sharkie',
     projectName: 'Sharkie',
     projectSkills: ['JavaScript', 'HTML', 'CSS'],
     projectDescription:
       'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
     projectImg: 'assets/img/projects/sharkie.png',
   };
+  constructor(private router: Router) {}
 
-  showProjectDetailsButton(){
+  showProjectDetailsButton() {
     this.hover = true;
   }
 
-  removeProjectDetailsButton(){
+  removeProjectDetailsButton() {
     this.hover = false;
   }
 
-  nav(){
-    console.log('test');
+  navigateToSingleProject(projectID: string) {
+    this.router.navigateByUrl('/project/' + projectID);
   }
 }

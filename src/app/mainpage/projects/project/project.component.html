@@ -1,11 +1,11 @@
 <div class="project">
     <div (mouseover)="showProjectDetailsButton()" (mouseleave)="removeProjectDetailsButton()" class="project-img-container">
         <img [ngClass]="{'zoom-in':hover}" class="project-img" src="{{project.projectImg}}" alt="">
-        <button (click)="nav()" [ngClass]="{'d-none':!hover}" class="white-button desktop-button">Project Details</button>
+        <button (click)="navigateToSingleProject(project.projectID)" [ngClass]="{'d-none':!hover}" class="white-button desktop-button">Project Details</button>
     </div>
     <div class="project-details">
         <h3 class="project-name">{{project.projectName}}</h3>
         <p class="project-description">{{project.projectDescription}}</p>
     </div>
-    <button  class="black-button mobile-button">Project Details</button>
+    <button class="black-button mobile-button">Project Details</button>
 </div>
