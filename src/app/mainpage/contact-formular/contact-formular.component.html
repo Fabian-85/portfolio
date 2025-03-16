@@ -17,41 +17,57 @@
                     <img src="assets/img/arrow-contact-section.png" alt="">
                 </div>
             </div>
-            <div class="right-side">
+            <form (ngSubmit)="onSubmit(contactForm)" class="right-side" #contactForm="ngForm">
                 <div (mouseenter)="highlightOnFirstInput()" (mouseleave)="removeHighlightingFromFirstInput()"
                     class="input-box">
-                    <label [ngClass]="{'label-hover-color':hoverOnFirstInput}" for="">What's your name?</label>
-                    <input type="text">
+                    <label [ngClass]="{'label-hover-color':hoverOnFirstInput}" for="name">What's your name?</label>
+                    <input placeholder="Schreibe hier deinen Namen" #name="ngModel" id="name" name="name"
+                        [(ngModel)]="contactData.name" type="text" required>
+                    @if(!name.valid && name.touched &&!name.disabled){
+                    <span class="error">Deine Name fehlt</span>
+                    }
                 </div>
                 <div (mouseenter)="highlightOnSecondInput()" (mouseleave)="removeHighlightingFromSecondInput()"
                     class="input-box">
-                    <label [ngClass]="{'label-hover-color':hoverOnSecondInput}" for="">What's your email?</label>
-                    <input type="text">
-                    <span></span>
+                    <label [ngClass]="{'label-hover-color':hoverOnSecondInput}" for="email">What's your email?</label>
+                    <input placeholder="deinemail@mail.com" #email="ngModel" id="email" name="email"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
+                        type="text" required>
+                    @if(!email.valid && email.touched &&!email.disabled){
+                    <span class="error">Dies ist eine ungültige Email</span>
+                    }
                 </div>
                 <div (mouseenter)="highlightOnTextfield()" (mouseleave)="removeHighlightingFromTextfield()"
                     class="input-box">
-                    <label [ngClass]="{'label-hover-color':hoverOnTextField}" for="">How can I help you?</label>
-                    <textarea name="" rows="1"></textarea>
-                    <span></span>
+                    <label [ngClass]="{'label-hover-color':hoverOnTextField}" for="message">How can I help you?</label>
+                    <textarea placeholder="Schreibe hier deine Nachricht" #message="ngModel" id="message" name="message"
+                        required [(ngModel)]="contactData.message" rows="1"></textarea>
+                    @if(!message.valid && message.touched &&!message.disabled){
+                    <span class="error">Deine Nachricht scheint zu fehlen</span>
+                    }
+
                 </div>
                 <div class="custom-checkbox-container">
-                    <label class="custom-checkbox" tab-index="0" aria-label="Checkbox Label">
-                        <input type="checkbox">
+                    <label  class="custom-checkbox" tab-index="0" aria-label="Checkbox Label">
+                        <input #privacy="ngModel" [(ngModel)]="privacyPolicy"  name="privacy-policy" type="checkbox" required="true">
                         <span class="checkmark"></span>
                     </label>
                     <p>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
                     </p>
-                    <a href=""></a>
                 </div>
+
+                @if(!privacy.valid && privacy.touched &&!privacy.disabled){
+                    <span style="padding-top: 10px;" class="error">Bitte akzeptiere die Datenschutzbestimmungen</span>
+                    }
+                    
                 <div class="send-button">
                     <div class="mobile-arrow-img">
                         <img src="assets/img/arrow-contact-section.png" alt="">
                     </div>
-                    <button class="white-button">Senden</button>
+                    <button  [ngClass]="{'button-disabled':!contactForm.valid}" class="white-button">Senden</button>
                 </div>
 
-            </div>
+            </form>
         </div>
 
         <app-footer></app-footer>

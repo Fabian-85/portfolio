@@ -10,6 +10,12 @@ import { CommonModule } from '@angular/common';
 export class AboutMeComponent {
   isHeadlineDecorationVisible = true;
 
+  navigateToContactSection() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
   /*
   intervalId:any;
   ngOnInit(): void {

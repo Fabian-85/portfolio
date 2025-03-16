@@ -65,12 +65,11 @@ section {
   input,
   textarea {
     width: 100%;
-    color: white;
+    color: white !important;
     padding: 12px 20px;
-    background-color: transparent;
-    border: 0px;
-    outline: none;
-    background-color: transparent;
+    background-color: transparent !important;
+    border: 0px !important;
+    outline: none !important;
     &:focus {
       border: 0px;
       border-color: none;
@@ -96,6 +95,7 @@ section {
   display: flex;
   margin-top: 10px;
   gap: 8px;
+  align-items: center;
 
   .custom-checkbox {
     width: 25px;
@@ -104,7 +104,10 @@ section {
     cursor: pointer;
 
     input {
-      display: none;
+      position: absolute;
+      opacity: 0;
+      width: 25px;
+      height: 25px;
     }
 
     .checkmark {
@@ -130,6 +133,11 @@ section {
   }
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+}
+
 .custom-checkbox input:checked + .checkmark {
   background: url("../../../assets/img/checked.png") center/contain no-repeat;
 }
@@ -141,6 +149,12 @@ section {
     margin-top: 16px;
     align-self: flex-end;
   }
+}
+
+.button-disabled {
+  background-color: #c0c0c0 ;
+  color: #6c757d;
+  box-shadow: none;
 }
 
 @media (max-width: 950px) {
@@ -175,7 +189,7 @@ section {
 @media (max-width: 850px) {
   .content {
     padding: 144px 100px 0 !important;
-  } 
+  }
 }
 
 @media (max-width: 630px) {

@@ -83,8 +83,6 @@ export class AboveTheFoldComponent {
   }
 
   showButtonAnimationOnMobile() {
-    console.log(this.endOfHandAnimationOnMobile);
-    console.log(this.hoverOnWelcomeButtonOnMobile);
     if (this.endOfHandAnimationOnMobile == false) {
       this.hoverOnWelcomeButtonOnMobile = true;
       setTimeout(() => {
