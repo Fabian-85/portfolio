@@ -1,4 +1,54 @@
 <section>
+    <div class="background-image">
 
-    
+        <div class="back-arrow">
+            <a   href="/"> <img src="assets/img/back-arrow.png" alt="">
+                <span>Zurück</span>
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="left-side">
+                <div class="headline">
+                    <h2>{{projectService.currentProject.projectName}} <img
+                            [ngClass]="{'underline-headline': isHeadlineDecorationVisible}"
+                            src="assets/img/headline-about-me-underline.png" alt=""></h2>
+                </div>
+                <div class="gap-top">
+                    <h3>Beschreibung</h3>
+                    <div>{{projectService.currentProject.projectDescription}}</div>
+                </div>
+                <div class="gap-top">
+                    <h3>Implementierungsdetails </h3>
+                    <div>{{projectService.currentProject.projectDetails}}</div>
+                </div>
+                <div class="skills gap-top">
+                    @for (projectSkillImage of projectService.currentProject.projectSkillImg; track index; let index =
+                    $index) {
+                    <div class="skill">
+                        <img src="assets/img/skill-icons/{{projectSkillImage}}" alt="">
+                        <span>{{projectService.currentProject.projectSkills[index]}}</span>
+                    </div>
+                    }
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="project-image">
+                    <img src="{{projectService.currentProject.projectImg}}" alt="">
+                </div>
+                <div class="buttons">
+                    <button class="white-button">Github</button>
+                    <button class="white-button">Live Test</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-project">
+            <div (click)="projectService.goToNextProject()">
+                <span>Nächstes Projekt</span>
+                <img src="assets/img/forward-arrow.png" alt="">
+            </div>
+        </div>
+    </div>
 </section>

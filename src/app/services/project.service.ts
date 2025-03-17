@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
@@ -12,14 +12,18 @@ export class ProjectService {
     projectID: string;
     projectName: string;
     projectSkills: string[];
+    projectSkillImg: string[];
     projectDescription: string;
+    projectDetails: string;
     projectImg: string;
   } = {
     projectID: 'Sharkie',
     projectName: 'Sharkie',
+    projectSkillImg: ['javaScript.png', 'html.png', 'css.png'],
     projectSkills: ['JavaScript', 'HTML', 'CSS'],
     projectDescription:
       'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
+    projectDetails: '',
     projectImg: 'assets/img/projects/sharkie.png',
   };
 
@@ -27,7 +31,13 @@ export class ProjectService {
     {
       projectID: 'Join',
       projectName: 'Join',
-      projectSkills: ['JavaScript', 'HTML', 'CSS'],
+      projectSkills: ['CSS', 'HTML', 'Firebase', 'JavaScript'],
+      projectSkillImg: [
+        'css.png',
+        'html.png',
+        'firebase.png',
+        'javaScript.png',
+      ],
       projectDescription:
         'Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
       projectDetails:
@@ -38,6 +48,7 @@ export class ProjectService {
       projectID: 'Sharkie',
       projectName: 'Sharkie',
       projectSkills: ['JavaScript', 'HTML', 'CSS'],
+      projectSkillImg: ['javaScript.png', 'html.png', 'css.png'],
       projectDescription:
         'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
       projectDetails:
@@ -47,7 +58,14 @@ export class ProjectService {
     {
       projectID: 'Simple-CRM',
       projectName: 'Simple CRM',
-      projectSkills: ['Angular', 'Firebase'],
+      projectSkills: ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript'],
+      projectSkillImg: [
+        'css.png',
+        'html.png',
+        'firebase.png',
+        'angular.png',
+        'typeScript.png',
+      ],
       projectDescription:
         'Ein sehr einfaches Customer Relationship Management (CRM)-System mit grundlegender CRUD-Funktionalität.',
       projectDetails:
@@ -57,7 +75,8 @@ export class ProjectService {
     {
       projectID: 'Pokedex',
       projectName: 'Pokedex',
-      projectSkills: ['JavaScript', 'HTML', 'CSS'],
+      projectSkills: ['Rest API', 'JavaScript', 'CSS', 'HTML'],
+      projectSkillImg: ['api.png', 'javaScript.png', 'html.png', 'css.png'],
       projectDescription:
         'Eine einfache Bibliothek basierend auf der PokéAPI, die Pokémon-Informationen bereitstellt und katalogisiert.',
       projectDetails:
@@ -67,7 +86,14 @@ export class ProjectService {
     {
       projectID: 'DA-Bubble',
       projectName: 'DA Bubble',
-      projectSkills: ['Angular', 'Typescript', 'Firebase'],
+      projectSkills: ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript'],
+      projectSkillImg: [
+        'css.png',
+        'html.png',
+        'firebase.png',
+        'angular.png',
+        'typeScript.png',
+      ],
       projectDescription:
         'Eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und -zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeit-Messaging und eine effiziente Kanalorganisation.',
       projectDetails:
@@ -76,7 +102,7 @@ export class ProjectService {
     },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   findCurrentProjectWithID() {
     for (let index = 0; index < this.projects.length; index++) {
@@ -86,5 +112,16 @@ export class ProjectService {
         this.currentProject = project;
       }
     }
+  }
+
+  goToNextProject() {
+    if (this.currentIndex >= this.projects.length - 1) {
+      this.currentIndex = 0;
+    } else {
+      this.currentIndex++;
+    }
+    this.router.navigateByUrl(
+      '/project/' + this.projects[this.currentIndex].projectID
+    );
   }
 }
