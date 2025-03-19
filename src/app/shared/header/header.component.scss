@@ -1,8 +1,10 @@
 header {
-  position: absolute;
+  background: rgba(0, 0, 0, 0.99);
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index:999;
 
   .hide-mobile {
     display: flex;

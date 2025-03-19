@@ -115,9 +115,19 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    img {
-      width: 100%;
-      border-radius: 20px;
+    .project-img-section {
+      position: relative;
+      .project-img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      .icon {
+        position: absolute;
+        width: 160px;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
     }
 
     .buttons {
@@ -135,6 +145,10 @@ h3 {
 
   .right-side {
     padding: 0 0px 0 80px !important;
+  }
+
+  .icon {
+    width: 90px !important;
   }
 }
 
@@ -154,6 +168,10 @@ h3 {
     background: url(../../assets/img/background-single-project-section-responsive.png) !important;
     background-size: 100% 80% !important;
     background-position: top center !important;
+  }
+
+  .icon{
+    display:none !important;
   }
 }
 

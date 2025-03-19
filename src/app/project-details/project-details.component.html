@@ -34,9 +34,18 @@
             </div>
 
             <div class="right-side">
-                <div class="project-image">
-                    <img src="{{projectService.currentProject.projectImg}}" alt="">
-                </div>
+                @if(projectService.currentProject.projectID=='Join'){
+                    <div class="project-img-section">
+                        <img class="project-img" src="assets/img/projects/join-without-desktop.png" alt="">
+                        <img class="icon" src="assets/img/featured-project-icon.png" alt="">
+                    </div>
+                }@else {
+                    <div class="project-img-section">
+                        <img class="project-img" src="{{projectService.currentProject.projectImg}}" alt="">
+                        <img class="icon" src="assets/img/contact-icon.png" alt="">
+                    </div>
+                }
+                
                 <div class="buttons">
                     <button class="white-button">Github</button>
                     <button class="white-button">Live Test</button>
