@@ -27,8 +27,6 @@ export class ContactFormularComponent {
     message: '',
   };
 
-  mailTest = true;
-
   post = {
     endPoint: 'sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -65,24 +63,20 @@ export class ContactFormularComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.showSendAnimation();
             ngForm.resetForm();
             this.privacyPolicy = false;
-            this.showSendAnimation();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid) {
-      this.showSendAnimation();
-      ngForm.resetForm();
-      this.privacyPolicy = false;
     } else {
       ngForm.control.markAllAsTouched();
     }

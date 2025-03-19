@@ -16,6 +16,8 @@ export class ProjectService {
     projectDescription: string;
     projectDetails: string;
     projectImg: string;
+    gitHubUrl: string,
+    testingUrl: string,
   } = {
     projectID: 'Sharkie',
     projectName: 'Sharkie',
@@ -25,6 +27,8 @@ export class ProjectService {
       'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
     projectDetails: '',
     projectImg: 'assets/img/projects/sharkie.png',
+    gitHubUrl: 'https://github.com/Fabian-85/sharky',
+    testingUrl: 'https://sharky.fabian-maier-kumpukkattu.de',
   };
 
   projects = [
@@ -43,17 +47,21 @@ export class ProjectService {
       projectDetails:
         'Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
       projectImg: 'assets/img/projects/join.png',
+      gitHubUrl: 'https://github.com/Fabian-85/join',
+      testingUrl: 'https://join.fabian-maier-kumpukkattu.de',
     },
     {
-      projectID: 'Sharkie',
-      projectName: 'Sharkie',
+      projectID: 'Sharky',
+      projectName: 'Sharky',
       projectSkills: ['JavaScript', 'HTML', 'CSS'],
       projectSkillImg: ['javaScript.png', 'html.png', 'css.png'],
       projectDescription:
-        'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
+        'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharky, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
       projectDetails:
-        'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
+        'Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Sharky, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.',
       projectImg: 'assets/img/projects/sharkie.png',
+      gitHubUrl: 'https://github.com/Fabian-85/sharky',
+      testingUrl: 'https://sharky.fabian-maier-kumpukkattu.de',
     },
     {
       projectID: 'Simple-CRM',
@@ -71,6 +79,8 @@ export class ProjectService {
       projectDetails:
         'Ein sehr einfaches Customer Relationship Management (CRM)-System mit grundlegender CRUD-Funktionalität.',
       projectImg: 'assets/img/projects/simple-crm.png',
+      gitHubUrl: 'https://github.com/Fabian-85/',
+      testingUrl: 'https://simple-crm.fabian-maier-kumpukkattu.de',
     },
     {
       projectID: 'Pokedex',
@@ -82,6 +92,8 @@ export class ProjectService {
       projectDetails:
         'Eine einfache Bibliothek basierend auf der PokéAPI, die Pokémon-Informationen bereitstellt und katalogisiert.',
       projectImg: 'assets/img/projects/pokedex.png',
+      gitHubUrl: 'https://github.com/Fabian-85/pokedex',
+      testingUrl: 'https://pokedex.fabian-maier-kumpukkattu.de ',
     },
     {
       projectID: 'DA-Bubble',
@@ -99,6 +111,8 @@ export class ProjectService {
       projectDetails:
         'Eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und -zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeit-Messaging und eine effiziente Kanalorganisation.',
       projectImg: 'assets/img/projects/dabubble.png',
+      gitHubUrl: 'https://github.com/Fabian-85/dabubble',
+      testingUrl: 'https://dabubble.fabian-maier-kumpukkattu.de ',
     },
   ];
 

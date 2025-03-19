@@ -84,6 +84,18 @@ h3 {
   transform: scale(1) !important;
 }
 
+button {
+  padding: 0 !important;
+  a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 12px 24px;
+  }
+}
+
 .content {
   display: flex;
   padding-top: 48px;
@@ -170,8 +182,8 @@ h3 {
     background-position: top center !important;
   }
 
-  .icon{
-    display:none !important;
+  .icon {
+    display: none !important;
   }
 }
 
