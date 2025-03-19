@@ -12,13 +12,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-formular.component.scss',
 })
 export class ContactFormularComponent {
-
   http = inject(HttpClient);
-
 
   hoverOnFirstInput = false;
   hoverOnSecondInput = false;
   hoverOnTextField = false;
+  sendMessageAnimation = false;
+  removeSendMessageContainer = false;
   privacyPolicy = false;
 
   contactData = {
@@ -27,7 +27,7 @@ export class ContactFormularComponent {
     message: '',
   };
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint: 'sendMail.php',
@@ -66,11 +66,13 @@ export class ContactFormularComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
             this.privacyPolicy = false;
+            this.showSendAnimation();
           },
           error: (error) => {
             console.error(error);
@@ -78,10 +80,23 @@ export class ContactFormularComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
-      ngForm.control.markAllAsTouched();
+      this.showSendAnimation();
       ngForm.resetForm();
       this.privacyPolicy = false;
+    } else {
+      ngForm.control.markAllAsTouched();
     }
-    
+  }
+
+  showSendAnimation() {
+    this.sendMessageAnimation = true;
+    setTimeout(() => {
+      this.removeSendMessageContainer = true;
+    }, 1500);
+
+    setTimeout(() => {
+      this.removeSendMessageContainer = false;
+      this.sendMessageAnimation = false;
+    }, 3500);
   }
 }

@@ -129,8 +129,8 @@ section {
     a {
       color: #3355ff;
       text-decoration: none;
-      &:hover{
-        color:#f7c518;
+      &:hover {
+        color: #f7c518;
       }
     }
   }
@@ -155,10 +155,65 @@ section {
 }
 
 .button-disabled {
-  background-color: #c0c0c0 ;
+  background-color: #c0c0c0;
   color: #6c757d;
   box-shadow: none;
 }
+
+.send-message {
+  position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: 1s send-animation;
+   transition: 1s opacity ease-in-out;
+   span{
+    background-color: #3355ff;
+    color: white;
+    padding: 50px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+   }
+}
+
+.d-none{
+  opacity: 0;
+}
+
+@keyframes send-animation {
+  0% {
+    transform: translateY(200%);
+  }
+  30%{
+    transform: translateY(80%);
+  }
+  40%{
+    transform: translateY(80%);
+  }
+  50%{
+    transform: translateY(3%);
+  }
+  70%{
+    transform: translateY(-3%);
+  }
+  80%{
+    transform: translateY(3%);
+  }
+  90%{
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 @media (max-width: 950px) {
   .content {
@@ -198,6 +253,13 @@ section {
 @media (max-width: 630px) {
   .content {
     padding: 144px 50px 0 !important;
+  }
+
+  .send-message { 
+     span{
+      width: 90%;
+     }
+     
   }
 }
 
