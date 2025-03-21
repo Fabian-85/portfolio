@@ -55,5 +55,11 @@
   },
   "footer": {
     "IMPRINT": "Imprint"
+  },
+  "imprint": {
+    "HEADLINE": "Imprint",
+    "INFORMATION": "Information according to",
+    "CONTACT": "Contact",
+    "TELEFON": "phone"
   }
 }

@@ -55,5 +55,11 @@
   },
   "footer": {
     "IMPRINT": "Impressum"
+  },
+  "imprint": {
+    "HEADLINE": "Impressum",
+    "INFORMATION": "Angaben gemäß",
+    "CONTACT": "Kontakt",
+    "TELEFON": "Impressum"
   }
 }
