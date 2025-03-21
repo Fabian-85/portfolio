@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss',
 })
@@ -16,24 +17,43 @@ export class AboveTheFoldComponent {
   endOfHandAnimationOnMobile = false;
   timeoutId: any;
   firstWord = 'Frontend';
-  secondWord = 'ENTWICKLER';
+  secondWord = 'DEVELOPER';
   firstWordAsArray: any = [];
   secondWordAsArray: any = [];
   profilImageHover = false;
   profilImageName = 'Fabian :)';
 
+  constructor(private translateService: TranslateService) {}
+
   ngOnInit() {
+    this.loadFirstWord();
+    this.loadSecondWord();
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.loadSecondWord();
+    });
+  }
+
+  loadFirstWord() {
     this.firstWordAsArray = this.firstWord.split('').map((char) => ({
       original: char,
       display: char,
       changeLetter: false,
     }));
+  }
 
-    this.secondWordAsArray = this.secondWord.split('').map((char) => ({
-      original: char,
-      display: char,
-      changeLetter: false,
-    }));
+  loadSecondWord() {
+    this.translateService
+      .get('above-the-fold.DEVELOPER')
+      .subscribe((translation: string) => {
+        this.secondWord = translation;
+
+        this.secondWordAsArray = this.secondWord.split('').map((char) => ({
+          original: char,
+          display: char,
+          changeLetter: false,
+        }));
+      });
   }
 
   changeLetterOnFirstWorld(index: any) {

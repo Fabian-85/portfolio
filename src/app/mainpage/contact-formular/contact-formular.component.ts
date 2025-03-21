@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-formular',
   standalone: true,
-  imports: [FooterComponent, CommonModule, FormsModule],
+  imports: [FooterComponent, CommonModule, FormsModule,TranslateModule],
   templateUrl: './contact-formular.component.html',
   styleUrl: './contact-formular.component.scss',
 })

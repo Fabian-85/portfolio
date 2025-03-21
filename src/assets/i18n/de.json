@@ -1,0 +1,59 @@
+{
+  "header": {
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt"
+  },
+  "above-the-fold": {
+    "CONTACT-BUTTON": "Kontakt aufnehmen",
+    "DEVELOPER": "ENTWICKLER"
+  },
+  "about-me": {
+    "SMALL-HEADLINE": "WER BIN ICH?",
+    "HEADLINE": "Über mich",
+    "TEXTBOX": "Hi, ich bin Fabian Maier-Kumpukkattu, ein Frontend Entwickler. Schon immer fasziniert mich, wie Code komplexe Probleme in einfache, effiziente Lösungen verwandelt. Dabei sehe ich jede Herausforderung als Chance, meine Fähigkeiten zu verbessern und nach der eleganten Lösung zu streben. Dabei bin ich stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich weiterzuentwickeln.",
+    "CONTACT-BUTTON": "Lass uns reden",
+    "REMOTE": "Offen für Home Office",
+    "LIVE-IN": "Wohnsitz in Stuttgart"
+  },
+  "skills": {
+    "SMALL-HEADLINE": "MEINE SKILLS",
+    "HEADLINE": "Fähigkeiten",
+    "TEXTBOX": "Durch verschiedene Projekte habe ich umfassende Erfahrung mit einer Vielzahl von Frontend-Technologien gesammelt. Gleichzeitig bin ich stets motiviert, neue Technologien zu erlernen, um mich kontinuierlich weiterzuentwickeln."
+  },
+  "projects": {
+    "SMALL-HEADLINE": "MEINE ARBEIT",
+    "HEADLINE": "Projekte",
+    "TEXTBOX": "Entdecken Sie hier eine Auswahl meiner Projekte und interagieren Sie mit ihnen, um einen umfassenden Einblick in meine Fähigkeiten als Frontend-Entwickler zu erhalten."
+  },
+  "project-details": {
+    "BACK": "Zurück",
+    "DESCRIPTION": "Beschreibung",
+    "IMPLEMENTATION-DETAILS": "Implementierungsdetails",
+    "NEXT-PROJECT": "Nächstes Projekt"
+  },
+  "contact": {
+    "SMALL-HEADLINE": "KONTAKTIEREN SIE MICH",
+    "HEADLINE": "Bereit für eine Zusammenarbeit?",
+    "TEXTBOX": "DEVELOPER",
+    "INPUT-NAME-LABEL": "Wie lautet dein Name?",
+    "INPUT-EMAIL-LABEL": "Wie lautet deine E-Mail-Adresse?",
+    "INPUT-MESSAGE-LABEL": "Wie kann ich dir helfen?",
+    "INPUT-NAME-PLACEHOLDER":  "Schreibe hier deinen Namen",
+    "INPUT-EMAIL-PLACEHOLDER": "deinemail@mail.de",
+    "INPUT-MESSAGE-PLACEHOLDER": "Schreibe hier deine Nachricht",
+    "INPUT-NAME-ERROR": "Dein Name fehlt",
+    "INPUT-EMAIL-ERROR": "Dies ist eine ungültige Email",
+    "INPUT-MESSAGE-ERROR": "Deine Nachricht scheint zu fehlen",
+    "INPUT-PRIVACY-ERROR": "Bitte akzeptierem Sie die Datenschutzbestimmungen",
+    "PRIVACY_VERIFICATION-FIRST-PART": "Ich habe die ",
+    "PRIVACY_VERIFICATION-HIGHLIGHTED-PART": "Datenschutzbestimmungen ",
+    "PRIVACY_VERIFICATION-LAST-PART": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "SEND": "Senden",
+    "SUCCESS": "Diese Nachricht wurden versendet"
+  },
+  "footer": {
+    "IMPRINT": "Impressum"
+  }
+}

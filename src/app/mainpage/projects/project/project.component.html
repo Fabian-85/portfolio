@@ -5,7 +5,7 @@
     </div>
     <div class="project-details">
         <h3 class="project-name">{{project.projectName}}</h3>
-        <p class="project-description">{{project.projectDescription}}</p>
+        <p class="project-description"> {{ currentLanguage === 'en' ? project.projectDescription.en : project.projectDescription.de }}</p>
     </div>
-    <button class="black-button mobile-button">Project Details</button>
+    <button (click)="navigateToSingleProject(project.projectID)" class="black-button mobile-button">Project Details</button>
 </div>

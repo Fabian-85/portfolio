@@ -2,11 +2,11 @@
     <div class="background-image">
 
         <div class="back-arrow">
-            <a   href="/"> <img src="assets/img/back-arrow.png" alt="">
-                <span>Zurück</span>
+            <a href="/"> <img src="assets/img/back-arrow.png" alt="">
+                <span>{{ 'project-details.BACK' | translate }}</span>
             </a>
         </div>
-
+        
         <div class="content">
             <div class="left-side">
                 <div class="headline">
@@ -15,12 +15,15 @@
                             src="assets/img/headline-about-me-underline.png" alt=""></h2>
                 </div>
                 <div class="gap-top">
-                    <h3>Beschreibung</h3>
-                    <div>{{projectService.currentProject.projectDescription}}</div>
+                    <h3>{{ 'project-details.DESCRIPTION' | translate }}</h3>
+                    <div> {{ currentLanguage === 'en' ? projectService.currentProject.projectDescription.en :
+                        projectService.currentProject.projectDescription.de }}</div>
                 </div>
                 <div class="gap-top">
-                    <h3>Implementierungsdetails </h3>
-                    <div>{{projectService.currentProject.projectDetails}}</div>
+                    <h3>{{ 'project-details.IMPLEMENTATION-DETAILS' | translate }} </h3>
+
+                    <div> {{ currentLanguage === 'en' ? projectService.currentProject.projectDetails.en :
+                        projectService.currentProject.projectDetails.de }}</div>
                 </div>
                 <div class="skills gap-top">
                     @for (projectSkillImage of projectService.currentProject.projectSkillImg; track index; let index =
@@ -35,27 +38,29 @@
 
             <div class="right-side">
                 @if(projectService.currentProject.projectID=='Join'){
-                    <div class="project-img-section">
-                        <img class="project-img" src="assets/img/projects/join-without-desktop.png" alt="">
-                        <img class="icon" src="assets/img/featured-project-icon.png" alt="">
-                    </div>
+                <div class="project-img-section">
+                    <img class="project-img" src="assets/img/projects/join-without-desktop.png" alt="">
+                    <img class="icon" src="assets/img/featured-project-icon.png" alt="">
+                </div>
                 }@else {
-                    <div class="project-img-section">
-                        <img class="project-img" src="{{projectService.currentProject.projectImg}}" alt="">
-                        <img class="icon" src="assets/img/contact-icon.png" alt="">
-                    </div>
+                <div class="project-img-section">
+                    <img class="project-img" src="{{projectService.currentProject.projectImg}}" alt="">
+                    <img class="icon" src="assets/img/contact-icon.png" alt="">
+                </div>
                 }
-                
+
                 <div class="buttons">
-                    <button class="white-button"><a  target="_blank"  href="{{projectService.currentProject.gitHubUrl}}"> Github</a></button>
-                    <button class="white-button">  <a  target="_blank"  href="{{projectService.currentProject.testingUrl}}"> Live Test</a></button>
+                    <button class="white-button"><a target="_blank" href="{{projectService.currentProject.gitHubUrl}}">
+                            Github</a></button>
+                    <button class="white-button"> <a target="_blank"
+                            href="{{projectService.currentProject.testingUrl}}"> Live Test</a></button>
                 </div>
             </div>
         </div>
 
         <div class="next-project">
             <div (click)="projectService.goToNextProject()">
-                <span>Nächstes Projekt</span>
+                <span>{{ 'project-details.NEXT-PROJECT' | translate }}</span>
                 <img src="assets/img/forward-arrow.png" alt="">
             </div>
         </div>
