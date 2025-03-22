@@ -1,26 +1,28 @@
 <header>
-    <div class="hide-mobile">
-        <span class="initials">FM</span>
-        <a class="about-me" href="#about-me"> {{ 'header.ABOUT_ME' | translate }}</a>
-        <a class="skills" href="#skills"> {{ 'header.SKILLS' | translate }}</a>
-        <a class="projects" href="#projects"> {{ 'header.PROJECTS' | translate }}</a>
-        <a class="contact" href="#contact"> {{ 'header.CONTACT' | translate }}</a>
-        <div>
-            <div class="language-toggle">
-                <span [class.active-lang-color]="!isEnglish">DE</span>
-                <div class="switch" (click)="changeLanguage()">
-                    <div class="slider" [class.active-lang-position]="isEnglish"></div>
+    <div class="max-witdh">
+        <div class="hide-mobile">
+            <span class="initials">FM</span>
+            <a class="about-me" href="#about-me"> {{ 'header.ABOUT_ME' | translate }}</a>
+            <a class="skills" href="#skills"> {{ 'header.SKILLS' | translate }}</a>
+            <a class="projects" href="#projects"> {{ 'header.PROJECTS' | translate }}</a>
+            <a class="contact" href="#contact"> {{ 'header.CONTACT' | translate }}</a>
+            <div>
+                <div class="language-toggle">
+                    <span [class.active-lang-color]="!isEnglish">DE</span>
+                    <div class="switch" (click)="changeLanguage()">
+                        <div class="slider" [class.active-lang-position]="isEnglish"></div>
+                    </div>
+                    <span [class.active-lang-color]="isEnglish">EN</span>
                 </div>
-                <span [class.active-lang-color]="isEnglish">EN</span>
             </div>
         </div>
-    </div>
 
-    <div class="hide-desktop">
-        <span class="initials">FM</span>
-        <img (click)="showResponsiveMenu()" (mouseenter)="isHoveredOnMenuIcon = true"
-            (mouseleave)="isHoveredOnMenuIcon = false" class="icon"
-            [src]="isHoveredOnMenuIcon ? 'assets/img/menu-hover.png' : 'assets/img/menu.png'" alt="">
+        <div class="hide-desktop">
+            <span class="initials">FM</span>
+            <img (click)="showResponsiveMenu()" (mouseenter)="isHoveredOnMenuIcon = true"
+                (mouseleave)="isHoveredOnMenuIcon = false" class="icon"
+                [src]="isHoveredOnMenuIcon ? 'assets/img/menu-hover.png' : 'assets/img/menu.png'" alt="">
+        </div>
     </div>
 </header>
 

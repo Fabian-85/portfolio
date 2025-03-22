@@ -6,6 +6,16 @@
   scroll-behavior: smooth;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  > * {
+    max-width: 1990px;
+  }
+}
+
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
   display: flex;
   flex-direction: $fd;
@@ -35,7 +45,7 @@ h3 {
 h4 {
   font-size: 23px;
   font-weight: 400;
-  color: #F87A55;
+  color: #f87a55;
 }
 
 p {
@@ -64,7 +74,7 @@ button {
   color: white;
   box-shadow: 2px 2px 0px white;
   &:hover {
-    background-color: #F87A55;
+    background-color: #f87a55;
     box-shadow: none;
   }
 }
@@ -74,18 +84,18 @@ button {
   color: black;
   box-shadow: 2px 2px 0px black;
   &:hover {
-    background-color: #F87A55;
+    background-color: #f87a55;
     box-shadow: none;
   }
 }
 
 @media (max-width: 850px) {
-  h1{
+  h1 {
     font-size: 64px;
     line-height: 100%;
   }
 
-  h2{
+  h2 {
     font-size: 48px;
     line-height: 100%;
   }
@@ -98,32 +108,31 @@ button {
 }
 
 @media (max-width: 500px) {
- h1{
-  font-size: 50px;
-  line-height: 50px;
- }
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 
 @media (max-width: 360px) {
-  h1{
-   font-size: 40px;
-   line-height: 40px;
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
   }
- }
+}
 /*---------------scrollbar--------------------- */
 ::-webkit-scrollbar {
-  width: 12px;  
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F87A55;
+  background: #f87a55;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3355FF;
+  background: #3355ff;
   border-radius: 6px;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
   background: #062ceb;
@@ -202,18 +211,18 @@ textarea::-webkit-scrollbar {
 /* kalam-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Kalam';
+  font-family: "Kalam";
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/kalem/kalam-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/kalem/kalam-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* kalam-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Kalam';
+  font-family: "Kalam";
   font-style: normal;
   font-weight: 700;
-  src: url('assets/fonts/kalem/kalam-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/kalem/kalam-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* league-script-regular - latin */
