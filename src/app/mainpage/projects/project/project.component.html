@@ -2,6 +2,9 @@
     <div (mouseover)="showProjectDetailsButton()" (mouseleave)="removeProjectDetailsButton()" class="project-img-container">
         <img [ngClass]="{'zoom-in':hover}" class="project-img" src="{{project.projectImg}}" alt="">
         <button (click)="navigateToSingleProject(project.projectID)" [ngClass]="{'d-none':!hover}" class="white-button desktop-button">Project Details</button>
+        @if(project.projectID =='Join'){
+            <img class="join-icon" src="assets/img/featured-project-icon.png  " alt="">
+        }
     </div>
     <div class="project-details">
         <h3 class="project-name">{{project.projectName}}</h3>
