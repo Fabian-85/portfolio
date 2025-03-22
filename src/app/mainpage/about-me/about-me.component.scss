@@ -58,12 +58,14 @@ section {
 }
  
 .first-background {
+  position: relative;
   background: url(../../../assets/img/yellow-background-about-me.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   padding: 45px 45px 55px 45px;
   transform: rotate(-3deg) translateY(38px);
+  z-index: 2;
 }
 
 .second-background {
@@ -74,7 +76,6 @@ section {
   background-size: contain;
   padding: 45px 45px 55px 45px;
   transform: rotate(2deg) translateY(-38px);
-  z-index: -1;
 }
 
 @media (max-width: 850px) {
