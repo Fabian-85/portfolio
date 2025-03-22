@@ -10,9 +10,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f87a55;
   width: 100%;
   > * {
-    max-width: 1990px;
+   width: 100%;
+   max-width: 1990px;
+   background-color: white;
   }
 }
 
