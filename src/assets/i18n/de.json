@@ -12,7 +12,7 @@
   "about-me": {
     "SMALL-HEADLINE": "WER BIN ICH?",
     "HEADLINE": "Über mich",
-    "TEXTBOX": "Hi, ich bin Fabian Maier-Kumpukkattu, ein Frontend Entwickler. Schon immer fasziniert mich, wie Code komplexe Probleme in einfache, effiziente Lösungen verwandelt. Dabei sehe ich jede Herausforderung als Chance, meine Fähigkeiten zu verbessern und nach der eleganten Lösung zu streben. Dabei bin ich stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich weiterzuentwickeln.",
+    "TEXTBOX": "Hi, ich bin Fabian Maier-Kumpukkattu, ein leidenschaftlicher Frontend-Entwickler. Ich bin begeistert von der Möglichkeit, durch Programmierung komplexe Probleme in intuitive und effiziente digitale Lösungen umzusetzen. Jede Herausforderung sehe ich als Chance, meine Fähigkeiten zu erweitern und stets nach innovativen, eleganten Lösungen zu streben. Dabei bin ich kontinuierlich auf der Suche nach neuen Projekten, um mein Wissen und meine Fertigkeiten weiter zu vertiefen.",
     "CONTACT-BUTTON": "Lass uns reden",
     "REMOTE": "Offen für Home Office",
     "LIVE-IN": "Wohnsitz in Stuttgart"
@@ -36,7 +36,7 @@
   "contact": {
     "SMALL-HEADLINE": "KONTAKTIEREN SIE MICH",
     "HEADLINE": "Bereit für eine Zusammenarbeit?",
-    "TEXTBOX": "DEVELOPER",
+    "TEXTBOX": "Nutzen Sie bitte das Kontaktformular, um sich mit mir in Verbindung zu setzen. Ich bin stets offen für neue Ideen und spannende Herausforderungen. Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, gemeinsam an Ihrem nächsten Projekt zu arbeiten.",
     "INPUT-NAME-LABEL": "Wie lautet dein Name?",
     "INPUT-EMAIL-LABEL": "Wie lautet deine E-Mail-Adresse?",
     "INPUT-MESSAGE-LABEL": "Wie kann ich dir helfen?",
