@@ -4,10 +4,17 @@
   background-size: cover;
   min-height: 100vh;
   color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .max-width {
+    width: 100%;
+    max-width: 1920px;
+  }
 }
 
 .imprint {
-  padding: 100px 80px 0 80px;
+  padding: 100px 80px 80px 80px;
   color: white;
 }
 
@@ -16,6 +23,11 @@ a{
     color: #3355ff;
   }
   
+  @media (max-width: 950px) {
+    .imprint {
+      padding: 100px 80px 0px 80px;
+    }
+  }
 
 @media (max-width: 850px) {
   .imprint {

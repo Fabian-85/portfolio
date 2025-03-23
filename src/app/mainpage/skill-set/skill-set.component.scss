@@ -3,8 +3,16 @@
 section {
   background: url(../../../assets/img/background-skill-section.png);
   background-repeat: no-repeat;
-  padding: 144px 120px;
-  color: white;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .max-width {
+    width: 100%;
+    max-width: 1920px;
+    padding: 144px 120px;
+    color: white;
+  }
 }
 
 .textbox {
@@ -76,7 +84,9 @@ section {
 
 @media (max-width: 850px) {
   section{
-    padding: 144px 100px;
+    .max-width {
+      padding: 144px 100px;
+    }
   }
 
   .skills {
@@ -101,12 +111,16 @@ section {
 
 @media (max-width: 630px) {
   section {
-    padding: 144px 50px;
+    .max-width {
+      padding: 144px 50px;
+    }
   }
 }
 
 @media (max-width: 530px) {
   section {
-    padding: 144px 20px;
+    .max-width {
+      padding: 144px 20px;
+    }
   }
 }

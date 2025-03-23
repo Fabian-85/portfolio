@@ -1,9 +1,15 @@
 section {
-  padding: 144px 80px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 56px 5%;
+  justify-content: center;
+  width: 100%;
+  .max-width{
+    padding: 144px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 56px 5%;
+    max-width: 1920px;
+  }
 }
 
 .description {
@@ -44,9 +50,11 @@ app-project {
 
 @media (max-width: 850px) {
   section {
-    padding: 144px 100px;
-    flex-direction: column;
-    gap: 40px;
+    .max-width{
+      padding: 144px 100px;
+      flex-direction: column;
+      gap: 40px;
+    }
   }
 
   .description {
@@ -60,12 +68,16 @@ app-project {
 
 @media (max-width: 630px) {
   section {
-    padding: 144px 50px;
+    .max-width{
+      padding: 144px 50px;
+    }
   }
 }
 
 @media (max-width: 530px) {
   section {
-    padding: 144px 20px;
+    .max-width{
+      padding: 144px 20px;
+    }
   }
 }

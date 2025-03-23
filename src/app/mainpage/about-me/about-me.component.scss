@@ -1,8 +1,14 @@
 section {
-  padding: 144px 80px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .max-width {
+    padding: 144px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+  }
 }
 
 .left-side {
@@ -35,7 +41,7 @@ section {
   }
 }
 
-.headline{
+.headline {
   h2 {
     display: inline;
     position: relative;
@@ -53,10 +59,10 @@ section {
   }
 }
 
-.underline-headline{
+.underline-headline {
   transform: scale(1) !important;
 }
- 
+
 .first-background {
   position: relative;
   background: url(../../../assets/img/yellow-background-about-me.png);
@@ -80,8 +86,10 @@ section {
 
 @media (max-width: 850px) {
   section {
-    flex-direction: column;
-    padding: 144px 100px;
+    .max-width {
+      flex-direction: column;
+      padding: 144px 100px;
+    }
   }
 
   .right-side,
@@ -93,13 +101,17 @@ section {
 
 @media (max-width: 630px) {
   section {
-    padding: 144px 50px;
+    .max-width {
+      padding: 144px 50px;
+    }
   }
 }
 
 @media (max-width: 530px) {
   section {
+    .max-width {
     padding: 144px 20px;
+    }
   }
 
   p {

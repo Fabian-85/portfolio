@@ -1,11 +1,13 @@
 <div class="background">
-    <div class='privacy-policy'>
-        @if(currentLanguage == 'en') {
-        <app-english-privacy-policy></app-english-privacy-policy>
-        } @else if (currentLanguage == 'de') {
-        <app-german-privacy-policy></app-german-privacy-policy>
-        }
-    </div>
+    <div class="max-width">
+        <div class='privacy-policy'>
+            @if(currentLanguage == 'en') {
+            <app-english-privacy-policy></app-english-privacy-policy>
+            } @else if (currentLanguage == 'de') {
+            <app-german-privacy-policy></app-german-privacy-policy>
+            }
+        </div>
 
-    <app-footer></app-footer>
+        <app-footer></app-footer>
+    </div>
 </div>

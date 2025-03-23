@@ -4,26 +4,38 @@
   background-size: 100% 150%;
   background-position: top;
   color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .max-width {
+    max-width: 1920px;
+  }
 }
 
 .privacy-policy {
   padding: 100px 80px 80px 80px;
 }
 
+@media (max-width: 950px) {
+  .privacy-policy {
+    padding: 100px 80px 0px 80px;
+  }
+}
+
 @media (max-width: 850px) {
   .privacy-policy {
-    padding: 100px 100px 80px 100px;
+    padding: 100px 100px 0px 100px;
   }
 }
 
 @media (max-width: 630px) {
   .privacy-policy {
-    padding: 100px 50px 80px 50px;
+    padding: 100px 50px 0px 50px;
   }
 }
 
 @media (max-width: 530px) {
   .privacy-policy {
-    padding: 100px 0px 80px 0px;
+    padding: 100px 0px 0px 0px;
   }
 }

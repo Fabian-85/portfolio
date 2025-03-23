@@ -1,30 +1,31 @@
 <section>
+    <div class="max-width">
+        <div class="textbox">
+            <div>
+                <p>{{'skills.SMALL-HEADLINE'|translate}}</p>
 
-    <div class="textbox">
-        <div>
-            <p>{{'skills.SMALL-HEADLINE'|translate}}</p>
+                <div class="headline">
+                    <h2>{{'skills.HEADLINE'|translate}}
+                        <img [ngClass]="{'underline-headline': isHeadlineDecorationVisible}"
+                            src="assets/img/headline-skill-set-underline.png" alt="">
+                    </h2>
+                </div>
+            </div>
 
-            <div class="headline">
-                <h2>{{'skills.HEADLINE'|translate}}
-                    <img [ngClass]="{'underline-headline': isHeadlineDecorationVisible}"
-                        src="assets/img/headline-skill-set-underline.png" alt="">
-                </h2>
+            <div class="skill-background">
+                <p>
+                    {{'skills.TEXTBOX'|translate}}
+                </p>
             </div>
         </div>
 
-        <div class="skill-background">
-            <p>
-                {{'skills.TEXTBOX'|translate}}
-            </p>
+        <div class="skills">
+            @for (skill of skillsIcons; track $index) {
+            <div class="skill">
+                <img src="assets/img/skill-icons/{{skill.icon}}" alt="">
+                <p>{{skill.name}}</p>
+            </div>
+            }
         </div>
-    </div>
-
-    <div class="skills">
-        @for (skill of skillsIcons; track $index) {
-        <div class="skill">
-            <img src="assets/img/skill-icons/{{skill.icon}}" alt="">
-            <p>{{skill.name}}</p>
-        </div>
-        }
     </div>
 </section>

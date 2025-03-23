@@ -1,18 +1,18 @@
 <section>
- 
-    <div class="description">
-        <p>{{'projects.SMALL-HEADLINE'|translate}}</p>
-        <div class="headline">
-            <h2>{{'projects.HEADLINE'|translate}}
-                <img [ngClass]="{'underline-headline': isHeadlineDecorationVisible}"
-                    src="assets/img/headline-projects-underline.png" alt="">
-            </h2>
+    <div class="max-width">
+        <div class="description">
+            <p>{{'projects.SMALL-HEADLINE'|translate}}</p>
+            <div class="headline">
+                <h2>{{'projects.HEADLINE'|translate}}
+                    <img [ngClass]="{'underline-headline': isHeadlineDecorationVisible}"
+                        src="assets/img/headline-projects-underline.png" alt="">
+                </h2>
+            </div>
+            <p>{{'projects.TEXTBOX'|translate}}</p>
         </div>
-        <p>{{'projects.TEXTBOX'|translate}}</p>
-    </div>
-   
-  @for (project of  projectService.projects; track index; let index = $index) {
-        <app-project [project]="project"></app-project>
-        } 
 
+        @for (project of projectService.projects; track index; let index = $index) {
+        <app-project [project]="project"></app-project>
+        }
+    </div>
 </section>

@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  isHeadlineDecorationVisible = true;
+  isHeadlineDecorationVisible = false;
 
   navigateToContactSection() {
     const element = document.getElementById('contact');
@@ -17,6 +17,8 @@ export class AboutMeComponent {
       element.scrollIntoView();
     }
   }
+
+  
   /*
   intervalId:any;
   ngOnInit(): void {
