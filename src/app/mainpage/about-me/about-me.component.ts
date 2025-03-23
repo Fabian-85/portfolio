@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { InViewDirective } from '../../in-view.directive';
 @Component({
   selector: 'app-about-me',
   standalone: true,
@@ -11,6 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
 export class AboutMeComponent {
   isHeadlineDecorationVisible = false;
 
+  constructor() {}
+
   navigateToContactSection() {
     const element = document.getElementById('contact');
     if (element) {
@@ -18,6 +21,9 @@ export class AboutMeComponent {
     }
   }
 
+  handleInView(isVisible: any): void {
+    this.isHeadlineDecorationVisible = true;
+  }
   
   /*
   intervalId:any;
