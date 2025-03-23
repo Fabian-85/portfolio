@@ -1,8 +1,12 @@
-.imprint {
+.background {
   background: url(../../assets/img/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  color: white;
+}
+
+.imprint {
   padding: 100px 80px 0 80px;
   color: white;
 }

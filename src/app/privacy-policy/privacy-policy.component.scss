@@ -1,10 +1,13 @@
-.privacy-policy {
+.background{
   background: url(../../assets/img/background-skill-section.png);
   background-repeat: no-repeat;
   background-size: 100% 150%;
   background-position: top;
-  padding: 100px 80px 80px 80px;
   color: white;
+}
+
+.privacy-policy {
+  padding: 100px 80px 80px 80px;
 }
 
 @media (max-width: 850px) {

@@ -7,11 +7,10 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-
+  background: rgba(18, 18, 18, 0.99);
   >.max-witdh{
    width:  100%;
-   max-width: 1990px !important;
-   background: rgba(18, 18, 18, 0.99);
+   max-width: 1920px !important;
   }
 
   .hide-mobile {

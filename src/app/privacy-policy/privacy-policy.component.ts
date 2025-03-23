@@ -3,6 +3,7 @@ import { EnglishPrivacyPolicyComponent } from './english-privacy-policy/english-
 import { GermanPrivacyPolicyComponent } from './german-privacy-policy/german-privacy-policy.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../shared/footer/footer.component';
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
@@ -10,7 +11,8 @@ import { CommonModule } from '@angular/common';
     EnglishPrivacyPolicyComponent,
     GermanPrivacyPolicyComponent,
     TranslateModule,
-    CommonModule
+    CommonModule,
+    FooterComponent
   ],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss',

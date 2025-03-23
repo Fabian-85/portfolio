@@ -31,9 +31,11 @@ section {
   margin-top: 28px;
   @include dFlex(center, center, row);
   flex-wrap: wrap;
+  gap: 40px 0;
   .skill {
     width: 20%;
     @include dFlex(center, center, column);
+    gap: 8px;
     img {
       width: 72px;
       height: 72px;
@@ -43,6 +45,9 @@ section {
         transform: scale(0.8);  
         filter: none;
       }
+    }
+    p{
+      text-align: center;
     }
   }
 }

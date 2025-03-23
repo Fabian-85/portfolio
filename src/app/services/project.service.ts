@@ -80,49 +80,6 @@ export class ProjectService {
       gitHubUrl: 'https://github.com/Fabian-85/Sharkie',
       testingUrl: 'https://sharkie.fabian-maier-kumpukkattu.de',
     },
-
-    {
-      projectID: 'Simple-CRM',
-      projectName: 'Simple CRM',
-      projectSkills: ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript'],
-      projectSkillImg: [
-        'css.png',
-        'html.png',
-        'firebase.png',
-        'angular.png',
-        'typeScript.png',
-      ],
-      projectDescription: {
-        de: 'Ein einfaches Customer Relationship Management (CRM)-System mit grundlegender CRUD-Funktionalität.',
-        en: 'A simple Customer Relationship Management (CRM) system working with CRUD functionality.',
-      },
-      projectDetails: {
-        de: 'Dieses Projekt wurde als Angular-Anwendung umgesetzt. Es handelt sich um ein einfaches CRM-System mit vollständiger CRUD-Funktionalität.',
-        en: 'This project was implemented as an Angular application. It is a simple CRM system with full CRUD functionality.',
-      },
-      projectImg: 'assets/img/projects/simple-crm.png',
-      gitHubUrl: 'https://github.com/Fabian-85/',
-      testingUrl: 'https://simple-crm.fabian-maier-kumpukkattu.de',
-    },
-
-    {
-      projectID: 'Pokedex',
-      projectName: 'Pokedex',
-      projectSkills: ['Rest API', 'JavaScript', 'CSS', 'HTML'],
-      projectSkillImg: ['api.png', 'javaScript.png', 'html.png', 'css.png'],
-      projectDescription: {
-        de: 'Eine einfache Bibliothek basierend auf der PokéAPI, die Pokémon-Informationen bereitstellt und katalogisiert.',
-        en: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      },
-      projectDetails: {
-        de: 'Dieses Projekt ermöglichte mir erste Erfahrungen mit einer externen API in JavaScript. Mithilfe der PokéAPI werden relevante Daten abgerufen, um Pokémon-Informationen übersichtlich und ansprechend darzustellen. Eine responsive Benutzeroberfläche mit dynamischen Suchfunktionen optimiert das Nutzererlebnis.',
-        en: 'This project gave me my first experience using an external API in JavaScript. With the help of the PokéAPI, relevant data is retrieved to display Pokémon information in a clear and appealing way. A responsive user interface with dynamic search functions further optimizes the user experience.',
-      },
-      projectImg: 'assets/img/projects/pokedex.png',
-      gitHubUrl: 'https://github.com/Fabian-85/pokedex',
-      testingUrl: 'https://pokedex.fabian-maier-kumpukkattu.de ',
-    },
-
     {
       projectID: 'DA-Bubble',
       projectName: 'DA Bubble',
