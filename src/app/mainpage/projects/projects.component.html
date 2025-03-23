@@ -12,7 +12,7 @@
         </div>
 
         @for (project of projectService.projects; track index; let index = $index) {
-        <app-project [project]="project"></app-project>
+        <app-project appInView (inView)="handleInView($event)" [project]="project"></app-project>
         }
     </div>
 </section>

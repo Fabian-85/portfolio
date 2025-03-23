@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="skills">
+        <div appInView (inView)="handleInView($event)" class="skills">
             @for (skill of skillsIcons; track $index) {
             <div class="skill">
                 <img src="assets/img/skill-icons/{{skill.icon}}" alt="">

@@ -4,10 +4,17 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { InViewDirective } from './../../in-view.directive';
 @Component({
   selector: 'app-contact-formular',
   standalone: true,
-  imports: [FooterComponent, CommonModule, FormsModule,TranslateModule],
+  imports: [
+    FooterComponent,
+    CommonModule,
+    FormsModule,
+    TranslateModule,
+    InViewDirective
+  ],
   templateUrl: './contact-formular.component.html',
   styleUrl: './contact-formular.component.scss',
 })
@@ -26,6 +33,8 @@ export class ContactFormularComponent {
     email: '',
     message: '',
   };
+
+  arrowAnimation = false;
 
   post = {
     endPoint: 'sendMail.php',
@@ -92,5 +101,13 @@ export class ContactFormularComponent {
       this.removeSendMessageContainer = false;
       this.sendMessageAnimation = false;
     }, 3500);
+  }
+
+  handleInView(isVisible: any): void {
+    if (isVisible) {
+      this.arrowAnimation = true;
+    } else {
+      this.arrowAnimation = false;
+    }
   }
 }

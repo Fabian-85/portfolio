@@ -27,7 +27,9 @@ export class AppComponent {
 
 ngOnInit(): void {
   AOS.init({
-    duration: 800, 
+    duration: 600, 
+    easing: 'ease-out',
+    once: true
   });
 }
 }

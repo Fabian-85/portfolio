@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { InViewDirective } from '../../in-view.directive';
+import { InViewDirective } from './../../in-view.directive';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule,TranslateModule,InViewDirective],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
@@ -22,21 +22,10 @@ export class AboutMeComponent {
   }
 
   handleInView(isVisible: any): void {
-    this.isHeadlineDecorationVisible = true;
-  }
-  
-  /*
-  intervalId:any;
-  ngOnInit(): void {
-    this.intervalId=setInterval(() => {
-      this.isHeadlineDecorationVisible = !this.isHeadlineDecorationVisible;
-      console.log('dd');
-    }, 3000);
-  }
-
-  ngOnDestroy(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
+   if (isVisible) {
+      this.isHeadlineDecorationVisible = true;
+    }else{
+      this.isHeadlineDecorationVisible = false;
     }
-  }*/
+  }
 }

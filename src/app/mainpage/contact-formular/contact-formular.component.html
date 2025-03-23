@@ -8,7 +8,8 @@
                     <h2>{{'contact.HEADLINE'|translate}}</h2>
                     <p>{{'contact.TEXTBOX'|translate}}</p>
                     <div class="desktop-arrow-img">
-                        <img src="assets/img/arrow-contact-section.png" alt="">
+                        <img [ngClass]="{'show-arrow': arrowAnimation}" src="assets/img/arrow-contact-section.png"
+                            alt="">
                     </div>
                 </div>
                 <form (ngSubmit)="onSubmit(contactForm)" class="right-side" #contactForm="ngForm">
@@ -62,9 +63,11 @@
 
                     <div class="send-button">
                         <div class="mobile-arrow-img">
-                            <img src="assets/img/arrow-contact-section.png" alt="">
+                            <img [ngClass]="{'show-arrow': arrowAnimation}" src="assets/img/arrow-contact-section.png"
+                                alt="">
                         </div>
-                        <button [ngClass]="{'button-disabled':!contactForm.valid}"
+                        <button appInView (inView)="handleInView($event)"
+                            [ngClass]="{'button-disabled':!contactForm.valid}"
                             class="white-button">{{'contact.SEND'|translate}}</button>
                     </div>
 
