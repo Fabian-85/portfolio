@@ -1,6 +1,6 @@
 <section  data-aos="fade-right">
     <div class="max-width">
-        <div class="description">
+        <div appInView (inView)="handleInView($event)" class="description">
             <p>{{'projects.SMALL-HEADLINE'|translate}}</p>
             <div class="headline">
                 <h2>{{'projects.HEADLINE'|translate}}
@@ -12,7 +12,7 @@
         </div>
 
         @for (project of projectService.projects; track index; let index = $index) {
-        <app-project appInView (inView)="handleInView($event)" [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
         }
     </div>
 </section>

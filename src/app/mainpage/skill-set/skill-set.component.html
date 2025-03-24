@@ -12,14 +12,14 @@
                 </div>
             </div>
 
-            <div class="skill-background">
+            <div appInView (inView)="handleInView($event)" class="skill-background">
                 <p>
                     {{'skills.TEXTBOX'|translate}}
                 </p>
             </div>
         </div>
 
-        <div appInView (inView)="handleInView($event)" class="skills">
+        <div class="skills">
             @for (skill of skillsIcons; track $index) {
             <div class="skill">
                 <img src="assets/img/skill-icons/{{skill.icon}}" alt="">

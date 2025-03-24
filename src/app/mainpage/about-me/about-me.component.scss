@@ -87,7 +87,7 @@ section {
 @media (max-width: 850px) {
   section {
     .max-width {
-      flex-direction: column;
+      flex-direction: column-reverse;
       padding: 144px 100px;
     }
   }

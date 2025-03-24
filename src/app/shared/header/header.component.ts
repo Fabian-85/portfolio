@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
@@ -13,10 +13,9 @@ export class HeaderComponent {
   isEnglish: boolean = true;
   isHoveredOnCloseIcon = false;
   isHoveredOnMenuIcon = false;
-
-  constructor(private translateService: TranslateService) {
-   
-  }
+  isFixed: boolean = false;
+  private lastScrollY: number = 0;
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
     const currentLanguage = this.getLanguageFromLocalStorage();
@@ -24,6 +23,18 @@ export class HeaderComponent {
       this.translateService.use(currentLanguage);
       this.isEnglish = currentLanguage === 'en';
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScrollY =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollY < this.lastScrollY && currentScrollY > 50) {
+      this.isFixed = true;
+    } else {
+      this.isFixed = false;
+    }
+    this.lastScrollY = currentScrollY;
   }
 
   changeLanguage() {
