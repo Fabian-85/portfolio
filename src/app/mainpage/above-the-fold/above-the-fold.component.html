@@ -24,7 +24,7 @@
             </div>
             <h1 class="first-word">
                 @for (letter of firstWordAsArray; track index; let index =$index) {
-                <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
+                <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'white' }"
                     (mouseleave)="resetLetterOnFirstWorld(index)"
                     (mouseenter)="changeLetterOnFirstWorld(index)">{{letter.display}}</span>
                 }
@@ -42,7 +42,7 @@
     <div class="bottom-container responsive-container">
         <h1 class="second-word">
             @for (letter of secondWordAsArray; track index; let index = $index) {
-            <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'black' }"
+            <span [ngStyle]="{'color': letter.changeLetter ? '#F7C518' :'white' }"
                 (mouseleave)="resetLetterOnSecondWorld(index)"
                 (mouseenter)="changeLetterOnSecondWorld(index)">{{letter.display}}</span>
             }
