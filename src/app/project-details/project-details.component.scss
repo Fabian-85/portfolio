@@ -157,7 +157,14 @@ button {
     }
   }
 }
-@media (max-width: 1100px) {
+
+@media (min-width: 1700px) {
+  .background-image {
+    background-size: 120% !important;
+  }
+}
+
+@media (max-width: 1544px) {
   .left-side {
     padding: 0 80px 0 0px !important;
   }

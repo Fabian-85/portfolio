@@ -10,12 +10,16 @@
   .max-width {
     width: 100%;
     max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 }
 
 .imprint {
   padding: 100px 80px 80px 80px;
   color: white;
+  flex: 1;
 }
 
 a{

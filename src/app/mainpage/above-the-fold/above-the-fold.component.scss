@@ -8,7 +8,7 @@ section {
   justify-content: center;
   .max-width {
     height: 100vh;
-    width: 100%;    
+    width: 100%;
     max-width: 1920px;
     display: flex;
     flex-direction: column;
@@ -20,6 +20,9 @@ section {
 
 h1 {
   cursor: default;
+  span {
+    color: white !important;
+  }
 }
 
 .top-container {
@@ -140,9 +143,9 @@ h1 {
 @media (max-width: 850px) {
   section {
     .max-width {
-    padding: 0px 100px;
-    align-items: center;
-    align-items: unset;
+      padding: 0px 100px;
+      align-items: center;
+      align-items: unset;
     }
   }
 
@@ -198,17 +201,17 @@ h1 {
 
 @media (max-width: 630px) {
   section {
-    .max-width{ 
-    padding: 0px 50px;
+    .max-width {
+      padding: 0px 50px;
     }
   }
 }
 
 @media (max-width: 530px) {
   section {
-    .max-width{ 
+    .max-width {
       padding: 0px 20px;
-      }
+    }
   }
 }
 
@@ -233,9 +236,9 @@ h1 {
 }
 
 @media (min-height: 1100px) {
-.icons{
-  bottom: 150px;
-}
+  .icons {
+    bottom: 150px;
+  }
 }
 
 @keyframes hover-hand-animation-responsive {
