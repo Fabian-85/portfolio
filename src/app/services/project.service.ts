@@ -99,7 +99,7 @@ export class ProjectService {
         de: 'Dieses Projekt nutzt Firebase Firestore für die Datenbankverwaltung und Firebase Authentication für die Benutzeranmeldung. Es ermöglicht zudem Echtzeitkommunikation und eine robuste Kanalorganisation zur Optimierung der Teamzusammenarbeit.',
         en: 'This project uses Firebase Firestore for database management and Firebase Authentication for user sign-in. It also enables real-time communication and robust channel organization to optimize team collaboration.',
       },
-      projectImg: 'assets/img/projects/dabubble.png',
+      projectImg: 'assets/img/projects/dabubble.jpg',
       gitHubUrl: 'https://github.com/Fabian-85/dabubble',
       testingUrl: 'https://dabubble.fabian-maier-kumpukkattu.de ',
     },
